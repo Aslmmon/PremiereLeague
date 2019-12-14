@@ -1,5 +1,5 @@
 # Premiere League
-Sample Project Task Fetching 
+Sample Project Task Fetching data from this Endpoint : https://api.football-data.org/v2/competitions/2021/matches 
 
 # Technologies Used 
 - Used <b> RxJava </b> to fetch data in a Specifed Thread and pass value response to MutableLive Data to be observed .
@@ -16,4 +16,4 @@ with <b> Map operator </b> to make changes on the data stream recieved
 - Unit test with Mocck Framework
 - handle errors if no network , or server error
 - handle save state of favourite icon
-- ui enhancments as show time with AM and PM 
+- ui enhancments as show time with AM and PM , change date to be as Days (Today,Tomorrow ,.. )

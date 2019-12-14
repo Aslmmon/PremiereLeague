@@ -5,6 +5,7 @@ Sample Project Task Fetching data from this Endpoint : https://api.football-data
 - Used <b> RxJava </b> to fetch data in a Specifed Thread and pass value response to MutableLive Data to be observed .
 with <b> Map operator </b> to make changes on the data stream recieved 
 - Used <b> Retrofit </b> as Network Client with <b>Gson</b> for Json Serialization.  
+- Used <b> Android Architecture  MVVM </b>
 - Used <b> Kotlin Collections as Filter And Group By for received Data </b> as Network Client with <b>Gson</b> for Json Serialization.  
 - Used <b> Room Database from Jetpack Component </b> to Save Favourite Matches in Database and retrieve it in Favourites Tab
 - Used <b> Koin </b>as Dependency injection from <b> Repository </b> ,<b> Network </b>,<b> Database </b>,<b> Data Source </b> layers.  

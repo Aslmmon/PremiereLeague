@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+app:cardBackgroundColor="#EDF9FF"
+    android:elevation="10dp"
+    app:cardCornerRadius="20dp">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/date"
+            android:visibility="gone"
+            android:text="Date is here"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Date_and_Time_style" />
+
+
+        <TextView
+            android:id="@+id/team1"
+            style="@style/team_name_style"
+            tools:text="Team 1 name"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date" />
+
+        <TextView
+            android:id="@+id/team1_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/team1"
+            app:layout_constraintEnd_toStartOf="@+id/dots"
+            app:layout_constraintStart_toEndOf="@+id/team1"
+            app:layout_constraintTop_toTopOf="@id/team1" />
+
+
+        <TextView
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/colorPrimary"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/team1_result"
+            app:layout_constraintEnd_toStartOf="@id/team2_result"
+            app:layout_constraintStart_toEndOf="@id/team1_result"
+            app:layout_constraintTop_toTopOf="@id/team1_result" />
+
+
+        <TextView
+            android:id="@+id/team2"
+            style="@style/team_name_style"
+            tools:text="Team 2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/team2_result" />
+
+        <TextView
+            android:id="@+id/team2_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/team2"
+            app:layout_constraintStart_toEndOf="@+id/dots"
+            app:layout_constraintTop_toTopOf="@id/team1_result" />
+
+
+        <com.varunest.sparkbutton.SparkButton
+            android:id="@+id/favourite_ic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            app:sparkbutton_animationSpeed="1.2"
+            app:sparkbutton_iconSize="40dp"
+            app:sparkbutton_primaryColor="@color/colorPrimary"
+            app:sparkbutton_activeImage="@drawable/ic_heart_filled"
+            app:sparkbutton_inActiveImage="@drawable/ic_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/team2" />
+
+
+        <TextView
+            android:id="@+id/time_match"
+            tools:text="@string/time_text"
+            android:fontFamily="monospace"
+            style="@style/Date_and_Time_style"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

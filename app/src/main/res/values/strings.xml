@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Premiere League</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favourites">Favourites</string>
+    <string name="home">Home</string>
+
+    <string name="main_fixtures">Home</string>
+    <string name="favourite_fixtures">Favourites </string>
+    <string name="no_favourites_yet">No Favourites Yet :((</string>
+    <string name="time_text">Time is here</string>
+
+</resources>

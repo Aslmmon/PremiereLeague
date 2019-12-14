@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/navigation_main_fixtures">
+
+    <fragment
+        android:id="@+id/navigation_main_fixtures"
+        android:name="com.example.premiereleague.feature.fixtures.main_fixtures.MainFixturesFragment"
+        android:label="@string/main_fixtures"
+        tools:layout="@layout/fragment_main_fixtures" />
+    <fragment
+        android:id="@+id/navigation_favourites"
+        android:name="com.example.premiereleague.feature.fixtures.favourite_fixtures.FavouriteFixturesFragment"
+        android:label="@string/favourite_fixtures"
+        tools:layout="@layout/fragment_favourite_fixtures" />
+</navigation>

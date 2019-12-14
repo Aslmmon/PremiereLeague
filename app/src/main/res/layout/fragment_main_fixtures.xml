@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".feature.fixtures.main_fixtures.MainFixturesFragment">
+
+
+  <TextView
+      android:id="@+id/date_enterd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:fontFamily="casual"
+      android:text="Premiere League Matches"
+      android:textColor="#4A4D4A"
+      android:textSize="24sp"
+
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:background="@color/light_gray"
+      android:layout_height="0dp"
+      android:id="@+id/match_recycler"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/date_enterd"
+      app:layout_constraintBottom_toBottomOf="parent"
+      tools:listitem="@layout/match_item"
+      tools:itemCount="3"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

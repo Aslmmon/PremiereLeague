@@ -6,8 +6,6 @@ import tellh.com.recyclertreeview_lib.LayoutItemType
 
 class Child(var  match: Matche) : LayoutItemType {
 
-
-
     override fun getLayoutId(): Int {
         return R.layout.match_item
     }

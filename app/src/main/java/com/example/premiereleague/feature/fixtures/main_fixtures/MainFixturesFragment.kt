@@ -101,30 +101,3 @@ class MainFixturesFragment : Fragment() {
 
     }
 }
-
-
-/**
- * unused hashs , commented to be as  a Refrence
- */
-//                    adapter.add(
-//                        MatchViewHolder(
-//                            match,
-//                            object : MatchViewHolder.OnHeartClickedListener {
-//                                override fun onHeartClicked(match: Matche) {
-//                                    mainFixturesViewModel.saveToDatabase(match)
-//                                    match.isFavourited = true
-//                                }
-//                            })
-//                    )
-
-//            for (match in it.matches.filter { (currentDate <= it.utcDate) }.groupBy { it.newDate }) {
-//
-//
-//                adapter.add(MatchViewHolder(match, object : MatchViewHolder.OnHeartClickedListener {
-//
-//                    override fun onHeartClicked(match: Matche) {
-
-//                    }
-//                }))
-//            }
-// shimmer.stopShimmer()

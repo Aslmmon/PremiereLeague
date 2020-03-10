@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         GlobalScope.launch {
-            delay(3000)
+            delay(2000)
             startActivity(Intent(this@SplashActivity,FixturesActivity::class.java))
         }
     }

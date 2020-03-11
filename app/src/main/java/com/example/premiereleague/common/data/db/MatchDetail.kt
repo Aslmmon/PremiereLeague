@@ -1,4 +1,4 @@
-package com.example.core.database
+package com.example.premiereleague.common.data.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

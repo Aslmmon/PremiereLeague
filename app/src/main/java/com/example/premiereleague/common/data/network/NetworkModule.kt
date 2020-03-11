@@ -1,4 +1,4 @@
-package com.example.core.network
+package com.example.premiereleague.common.data.network
 
 import com.example.core.BuildConfig
 import okhttp3.Interceptor
@@ -19,11 +19,11 @@ private const val baseUrl = "https://api.football-data.org"
 private fun getLogInterceptor() = HttpLoggingInterceptor().apply { level = sLogLevel }
 
 fun createNetworkClient() =
-    retrofitClient(baseUrl, okHttpClient(true))
+    retrofitClient(baseUrl, okHttpClient())
 
-private fun okHttpClient(addAuthHeader: Boolean) = OkHttpClient.Builder()
+private fun okHttpClient() = OkHttpClient.Builder()
     .addInterceptor(getLogInterceptor()).apply { setTimeOutToOkHttpClient(this) }
-    .addInterceptor(headersInterceptor(addAuthHeader)).build()
+    .addInterceptor(headersInterceptor()).build()
 
 private fun retrofitClient(baseUrl: String, httpClient: OkHttpClient): Retrofit =
     Retrofit.Builder()
@@ -33,7 +33,7 @@ private fun retrofitClient(baseUrl: String, httpClient: OkHttpClient): Retrofit 
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-fun headersInterceptor(addAuthHeader: Boolean) = Interceptor { chain ->
+fun headersInterceptor() = Interceptor { chain ->
     chain.proceed(
         chain.request().newBuilder()
             .addHeader("Content-Type", "application/json")

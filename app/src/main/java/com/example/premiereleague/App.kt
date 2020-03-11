@@ -12,7 +12,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 class App : Application() {
 
-    /**
+    /*
      * App to Start Koin with
      */
     override fun onCreate() {

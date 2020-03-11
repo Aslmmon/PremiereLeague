@@ -53,7 +53,7 @@ class MainFixturesFragment : Fragment() {
         mainFixturesViewModel.MatchDetail.observe(this, Observer {
             adapter.clear()
             val nodes = ArrayList<TreeNode<*>>()
-            var newMatch = it.matches.filter { (currentDate <= it.utcDate) }.groupBy { it.newDate }
+            val newMatch = it.matches.filter { (currentDate <= it.utcDate) }.groupBy { it.newDate }
             newMatch.forEach { (date, list) ->
                 val app = TreeNode(Parent(date = date))
                 nodes.add(app)

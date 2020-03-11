@@ -83,7 +83,7 @@ class MainFixturesFragment : Fragment() {
                 override fun onToggle(isExpand: Boolean, holder: RecyclerView.ViewHolder?) {
                     val dirViewHolder = holder as ParentBinder.ViewHolder
                     val ivArrow = dirViewHolder.ivArrow
-                    val rotateDegree = if (isExpand) 90 else -90
+                    val rotateDegree = if (isExpand) 90 else -900
                     ivArrow.animate().rotationBy(rotateDegree.toFloat())
                         .start()
                 }

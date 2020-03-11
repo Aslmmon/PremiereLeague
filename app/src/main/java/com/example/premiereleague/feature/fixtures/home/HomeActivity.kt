@@ -11,7 +11,6 @@ class HomeActivity : AppCompatActivity(R.layout.activity_main) {
     private val mainViewModel: MainViewModel by viewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         mainViewModel.getMatchDetails()
         mainViewModel.MatchDetail.observe(this, Observer {
             Log.i(javaClass.simpleName, it.matches.toString())

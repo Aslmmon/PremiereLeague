@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".feature.fixtures.FixturesActivity">
+        <activity android:name=".feature.fixtures.home.HomeActivity">
 
         </activity>
     </application>

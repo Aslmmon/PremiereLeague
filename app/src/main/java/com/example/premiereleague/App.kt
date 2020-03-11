@@ -3,7 +3,6 @@ package com.example
 import android.app.Application
 import com.example.premiereleague.di.databaseModule
 import com.example.premiereleague.di.repositoryModule
-import com.example.splasho.di.dataSourceModule
 import com.example.splasho.di.networkModule
 import com.example.splasho.di.viewModelModule
 
@@ -20,7 +19,7 @@ class App : Application() {
         startKoin {
             androidContext(this@App)
             androidLogger()
-            modules(listOf(repositoryModule,viewModelModule, dataSourceModule, networkModule,databaseModule))
+            modules(listOf(repositoryModule,viewModelModule, networkModule,databaseModule))
         }
     }
 }

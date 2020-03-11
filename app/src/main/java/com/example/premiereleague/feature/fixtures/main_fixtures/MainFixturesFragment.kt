@@ -1,27 +1,21 @@
 package com.example.premiereleague.feature.fixtures.main_fixtures
 
 
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
-import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.example.core.model.Matche
 import com.example.premiereleague.R
 import com.example.premiereleague.common.Utils
+import com.example.premiereleague.feature.fixtures.home.MainViewModel
 import com.example.premiereleague.feature.fixtures.main_fixtures.view_binder.ChildBinder
 import com.example.premiereleague.feature.fixtures.main_fixtures.view_binder.ParentBinder
 import com.example.premiereleague.feature.fixtures.main_fixtures.view_holder.Child
 import com.example.premiereleague.feature.fixtures.main_fixtures.view_holder.Parent
-import com.varunest.sparkbutton.SparkEventListener
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_main_fixtures.*
@@ -37,7 +31,7 @@ class MainFixturesFragment : Fragment() {
     /**
      * MainFix. View Model instaniated By Koin @start
      */
-    private val mainFixturesViewModel: MainFixturesViewModel by viewModel()
+    private val mainFixturesViewModel: MainViewModel by viewModel()
     val adapter = GroupAdapter<ViewHolder>()
     private var treeAdapter: TreeViewAdapter? = null
 
@@ -59,7 +53,7 @@ class MainFixturesFragment : Fragment() {
         mainFixturesViewModel.MatchDetail.observe(this, Observer {
             adapter.clear()
             val nodes = ArrayList<TreeNode<*>>()
-            var newMatch = it.matches.filter { (currentDate <= it.utcDate) }.groupBy { it.newDate }
+            val newMatch = it.matches.filter { (currentDate <= it.utcDate) }.groupBy { it.newDate }
             newMatch.forEach { (date, list) ->
                 val app = TreeNode(Parent(date = date))
                 nodes.add(app)
@@ -72,7 +66,7 @@ class MainFixturesFragment : Fragment() {
                 nodes,
                 listOf(ChildBinder(object : ChildBinder.OnHeartClickedListener {
                     override fun onHeartClicked(match: Matche) {
-                        mainFixturesViewModel.saveToDatabase(match)
+                       // mainFixturesViewModel.saveToDatabase(match)
                         match.isFavourited = true
                     }
 
@@ -89,7 +83,7 @@ class MainFixturesFragment : Fragment() {
                 override fun onToggle(isExpand: Boolean, holder: RecyclerView.ViewHolder?) {
                     val dirViewHolder = holder as ParentBinder.ViewHolder
                     val ivArrow = dirViewHolder.ivArrow
-                    val rotateDegree = if (isExpand) 90 else -90
+                    val rotateDegree = if (isExpand) 90 else -900
                     ivArrow.animate().rotationBy(rotateDegree.toFloat())
                         .start()
                 }

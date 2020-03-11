@@ -1,7 +1,7 @@
 package com.example.premiereleague.di
 
 import androidx.room.Room
-import com.example.core.database.AppDatabase
+import com.example.premiereleague.common.data.db.AppDatabase
 import org.koin.dsl.module
 
 val databaseModule = module {

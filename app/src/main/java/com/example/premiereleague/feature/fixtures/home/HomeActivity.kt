@@ -14,6 +14,7 @@ class HomeActivity : AppCompatActivity(R.layout.activity_main) {
         mainViewModel.getMatchDetails()
         mainViewModel.MatchDetail.observe(this, Observer {
             Log.i(javaClass.simpleName, it.matches.toString())
+
         })
     }
 }

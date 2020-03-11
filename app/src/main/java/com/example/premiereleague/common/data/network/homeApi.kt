@@ -8,5 +8,5 @@ import retrofit2.http.GET
 
 interface homeApi {
     @GET("/v2/competitions/2021/matches")
-    fun getMatchDetails(): MatchesResponse
+    suspend fun getMatchDetails(): MatchesResponse
 }

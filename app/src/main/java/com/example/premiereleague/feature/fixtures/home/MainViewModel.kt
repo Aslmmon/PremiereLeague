@@ -11,6 +11,7 @@ import com.example.premiereleague.common.model.team_info.TeamInformationResponse
 import com.example.premiereleague.common.repo.MainRepository.IMain
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import java.util.concurrent.TimeUnit
 
 class MainViewModel(var mainRepo: IMain) : ViewModel() {
 
@@ -20,12 +21,12 @@ class MainViewModel(var mainRepo: IMain) : ViewModel() {
     var _MatchesDetails = MutableLiveData<MatchesResponse>()
     var MatchDetail: LiveData<MatchesResponse> = _MatchesDetails
 
-    lateinit var matcheDetails: MatchDetails
     fun getMatchDetails() {
         viewModelScope.launch {
+
             try {
                 val result = mainRepo.getMatchesDetails()
-                var matchDetails = arrayListOf<MatchDetails>()
+
                 result.matches.take(5).asFlow().map { match ->
                     match.homeTeamInfo = mainRepo.getTeamInfo(match.homeTeam.id)
                     match.awayTeamInfo = mainRepo.getTeamInfo(match.awayTeam.id)

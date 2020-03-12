@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity(R.layout.activity_main) {
         mainViewModel.getMatchDetails()
         mainViewModel.MatchDetail.observe(this, Observer {
             adapter.clear()
-            it.matches.take(2).forEach {
+            it.matches.take(5).forEach {
                 Log.i(javaClass.simpleName,it.homeTeamInfo.crestUrl)
                 adapter.add(MatchViewHolder(it))
             }

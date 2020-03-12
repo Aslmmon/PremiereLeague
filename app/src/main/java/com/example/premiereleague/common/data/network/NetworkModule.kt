@@ -3,10 +3,12 @@ package com.example.premiereleague.common.data.network
 import com.example.core.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 
@@ -23,7 +25,8 @@ fun createNetworkClient() =
 
 private fun okHttpClient() = OkHttpClient.Builder()
     .addInterceptor(getLogInterceptor()).apply { setTimeOutToOkHttpClient(this) }
-    .addInterceptor(headersInterceptor()).build()
+    .addInterceptor(headersInterceptor())
+    .build()
 
 private fun retrofitClient(baseUrl: String, httpClient: OkHttpClient): Retrofit =
     Retrofit.Builder()
@@ -48,3 +51,4 @@ private fun setTimeOutToOkHttpClient(okHttpClientBuilder: OkHttpClient.Builder) 
         connectTimeout(30L, TimeUnit.SECONDS)
         writeTimeout(30L, TimeUnit.SECONDS)
     }
+

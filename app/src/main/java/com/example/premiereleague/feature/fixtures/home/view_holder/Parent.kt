@@ -1,4 +1,4 @@
-package com.example.premiereleague.feature.fixtures.main_fixtures.view_holder
+package com.example.premiereleague.feature.fixtures.home.view_holder
 
 import com.example.premiereleague.R
 import tellh.com.recyclertreeview_lib.LayoutItemType

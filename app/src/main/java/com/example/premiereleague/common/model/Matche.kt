@@ -1,5 +1,7 @@
 package com.example.core.model
 
+import com.example.premiereleague.common.model.team_info.TeamInformationResponse
+
 data class Matche(
     val awayTeam: AwayTeam,
     val group: String,
@@ -15,5 +17,7 @@ data class Matche(
     var utcDate: String,
     var newDate:String,
     var newTime:String,
-    var isFavourited:Boolean = false
+    var isFavourited:Boolean = false,
+    var homeTeamInfo:TeamInformationResponse,
+    var awayTeamInfo :TeamInformationResponse
 )

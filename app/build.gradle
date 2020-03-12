@@ -40,6 +40,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    //implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.ar-android:AndroidSvgLoader:1.0.0'
+
     // RxJava2
     implementation "io.reactivex.rxjava2:rxandroid:$RxAndroid_version"
     implementation "io.reactivex.rxjava2:rxjava:$RxJava_version"
@@ -51,6 +54,7 @@ dependencies {
     //Pandora
     implementation "com.pandora.bottomnavigator:bottom-navigator:$pandora_version"
 
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.4'
 
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

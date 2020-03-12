@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-app:cardBackgroundColor="#EDF9FF"
     android:elevation="10dp"
+    app:cardBackgroundColor="#EDF9FF"
     app:cardCornerRadius="20dp">
-
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,31 +21,41 @@ app:cardBackgroundColor="#EDF9FF"
 
         <TextView
             android:id="@+id/date"
-            android:visibility="gone"
+            style="@style/Date_and_Time_style"
             android:text="Date is here"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            style="@style/Date_and_Time_style" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
             android:id="@+id/team1"
             style="@style/team_name_style"
-            tools:text="Team 1 name"
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/date" />
+            app:layout_constraintTop_toBottomOf="@id/date"
+            tools:text="Team 1 name" />
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/soccerball"
+            app:layout_constraintEnd_toEndOf="@id/team1"
+            app:layout_constraintStart_toStartOf="@id/team1"
+            app:layout_constraintTop_toBottomOf="@id/team1" />
 
         <TextView
             android:id="@+id/team1_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="0"
             android:textColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="@id/team1"
             app:layout_constraintEnd_toStartOf="@+id/dots"
             app:layout_constraintStart_toEndOf="@+id/team1"
-            app:layout_constraintTop_toTopOf="@id/team1" />
+            app:layout_constraintTop_toTopOf="@id/team1"
+            tools:text="0" />
 
 
         <TextView
@@ -66,45 +75,29 @@ app:cardBackgroundColor="#EDF9FF"
         <TextView
             android:id="@+id/team2"
             style="@style/team_name_style"
-            tools:text="Team 2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/team2_result" />
+            app:layout_constraintTop_toTopOf="@id/team2_result"
+            tools:text="Team 2" />
+
+        <ImageView
+            android:id="@+id/iv_away"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/soccerball"
+            app:layout_constraintEnd_toEndOf="@id/team2"
+            app:layout_constraintStart_toStartOf="@id/team2"
+            app:layout_constraintTop_toBottomOf="@id/team2" />
 
         <TextView
             android:id="@+id/team2_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="0"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toStartOf="@+id/team2"
             app:layout_constraintStart_toEndOf="@+id/dots"
-            app:layout_constraintTop_toTopOf="@id/team1_result" />
-
-
-        <com.varunest.sparkbutton.SparkButton
-            android:id="@+id/favourite_ic"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
-            app:sparkbutton_animationSpeed="1.2"
-            app:sparkbutton_iconSize="40dp"
-            app:sparkbutton_primaryColor="@color/colorPrimary"
-            app:sparkbutton_activeImage="@drawable/ic_heart_filled"
-            app:sparkbutton_inActiveImage="@drawable/ic_heart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/team2" />
-
-
-        <TextView
-            android:id="@+id/time_match"
-            tools:text="@string/time_text"
-            android:fontFamily="monospace"
-            style="@style/Date_and_Time_style"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-
-
+            app:layout_constraintTop_toTopOf="@id/team1_result"
+            tools:text="0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

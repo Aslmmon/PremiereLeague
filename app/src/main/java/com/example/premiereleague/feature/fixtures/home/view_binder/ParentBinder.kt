@@ -1,10 +1,10 @@
-package com.example.premiereleague.feature.fixtures.main_fixtures.view_binder
+package com.example.premiereleague.feature.fixtures.home.view_binder
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.premiereleague.R
-import com.example.premiereleague.feature.fixtures.main_fixtures.view_holder.Parent
+import com.example.premiereleague.feature.fixtures.home.view_holder.Parent
 import tellh.com.recyclertreeview_lib.TreeNode
 import tellh.com.recyclertreeview_lib.TreeViewBinder
 

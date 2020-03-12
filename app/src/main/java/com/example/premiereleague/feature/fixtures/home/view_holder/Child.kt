@@ -1,4 +1,4 @@
-package com.example.premiereleague.feature.fixtures.main_fixtures.view_holder
+package com.example.premiereleague.feature.fixtures.home.view_holder
 
 import com.example.core.model.Matche
 import com.example.premiereleague.R
